@@ -1,4 +1,4 @@
-/* I Ran this in the console at https://adventofcode.com/2021/day/1/input */
+/* I Ran this in the console at https://adventofcode.com/2021/day/2/input */
 const commands = document.querySelector("pre").innerHTML.split(/\r?\n/);
 let y = 0;
 let x = 0;
