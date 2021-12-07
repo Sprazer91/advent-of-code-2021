@@ -1,12 +1,7 @@
-const input = document.querySelector("pre").innerHTML.split(",");
-let test = input.map(Number)
-let DAYS = DAYS;
-let fishes = [];
-test.forEach(function (x) { fishes[x] = (fishes[x] || 0) + 1; });
-fishes[0] = 0;
-fishes[6] = 0;
-fishes[7] = 0;
-fishes[8] = 0;
+const input = document.querySelector("pre").innerHTML.split(",").map(Number);
+let DAYS = 256;
+let fishes = new Array(9).fill(0);
+input.forEach(function (x) { fishes[x] = (fishes[x] || 0) + 1; });
 
 for (let day = 0; day < DAYS; day++) {
     let newDailyFishes = 0
@@ -14,7 +9,7 @@ for (let day = 0; day < DAYS; day++) {
         if (days===0) {
             newDailyFishes = fishes[days];
         }
-        if (days=== fishes.length - 1){
+        if (days === fishes.length - 1) {
             fishes[days] = 0;
         } else {   
             fishes[days] = fishes[(days+1)];
