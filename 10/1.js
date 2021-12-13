@@ -30,9 +30,9 @@ input.forEach(line => {
     line = line.replace(/&lt;/g, '<');
     line.split('').forEach(char => {
         /* corrupted line */
-        if (!foundIllegal){
+        if (!foundIllegal) {
             /* closing bracket */
-            if (brackets[char]){
+            if (brackets[char]) {
                 let lastOpened = openBrackets.pop()
                 if (brackets[char] !== lastOpened) {
                     illegal.push(bracketPoints[char]);
@@ -43,7 +43,7 @@ input.forEach(line => {
             }
         }
     })
-    if (!foundIllegal){
+    if (!foundIllegal) {
         let totalScore = 0;
         openBrackets = openBrackets.reverse();
         openBrackets.forEach(v => {
